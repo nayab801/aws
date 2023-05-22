@@ -15,8 +15,8 @@ node{
   }     
   
    stage('Remote SSH 2') {
-   // writeFile file: 'abc.sh', text: 'ls -lrt'
-   // sshScript remote: remote, script: "abc.sh"
+   // writeFile file: 'books.sh', text: 'ls -lrt'
+   // sshScript remote: remote, script: "books"
       sshCommand remote : remote, command: "sudo mkdir books"
       sshCommand remote : remote, command: "cd books"
      sshCommand remote : remote, command: "pwd"
