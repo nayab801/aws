@@ -22,12 +22,5 @@ node{
       sshCommand remote : remote, command: "cd laptops"
      sshCommand remote : remote, command: "pwd"
   }  
-  
-   stage('Remote SSH 3') {
-   // writeFile file: 'abc.sh', text: 'ls -lrt'
-   // sshScript remote: remote, script: "abc.sh"
-      sshCommand remote : remote, command: "sudo mkdir chair"
-      sshCommand remote : remote, command: "cd chair"
-     sshCommand remote : remote, command: "pwd"
-   }
 }
+   
