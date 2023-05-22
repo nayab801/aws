@@ -28,4 +28,5 @@ node{
       sshCommand remote : remote, command: "cd shooter"
      sshCommand remote : remote, command: "pwd"
         }
-      }
+           }
+              }
