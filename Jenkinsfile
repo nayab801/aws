@@ -14,12 +14,7 @@ node{
     sshCommand remote : remote, command: "pwd"
       sshCommand remote : remote, command: "ls -lrt"
   }     
-  
-   stage('Remote SSH 2') {
-   // writeFile file: 'abc.sh', text: 'ls -lrt'
-   // sshScript remote: remote, script: "abc.sh"
-      sshCommand remote : remote, command: "sudo mkdir pen"
-      sshCommand remote : remote, command: "cd pen"
-     sshCommand remote : remote, command: "pwd"
-  }  
-        }
+  stage('Remote SSH') {
+    sshRemove remote: remote, path: "chair"
+  } 
+} 
