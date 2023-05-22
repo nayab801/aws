@@ -15,6 +15,6 @@ node{
       sshCommand remote : remote, command: "ls -lrt"
   }     
   stage('Remote SSH') {
-    sshRemove remote: remote, path: "chair"
-  } 
+    sshGet remote: remote, from: laptop, into: pen, override: true
+  }
 } 
