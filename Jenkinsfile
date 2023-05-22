@@ -1,3 +1,4 @@
+
 node{
   def remote = [:]
   remote.name = 'oraclevm'
@@ -15,18 +16,10 @@ node{
   }     
   
    stage('Remote SSH 2') {
-   // writeFile file: 'books.sh', text: 'ls -lrt'
-   // sshScript remote: remote, script: "books.sh"
-      sshCommand remote : remote, command: "sudo mkdir waters"
-      sshCommand remote : remote, command: "cd waters"
+   // writeFile file: 'abc.sh', text: 'ls -lrt'
+   // sshScript remote: remote, script: "abc.sh"
+      sshCommand remote : remote, command: "sudo mkdir laptops"
+      sshCommand remote : remote, command: "cd laptops"
      sshCommand remote : remote, command: "pwd"
-  } 
-  stage('Remote SSH 3') {
-   // writeFile file: 'books.sh', text: 'ls -lrt'
-   // sshScript remote: remote, script: "books.sh"
-      sshCommand remote : remote, command: "sudo mkdir shooter"
-      sshCommand remote : remote, command: "cd shooter"
-     sshCommand remote : remote, command: "pwd"
+  }  
         }
-           }
-              }
